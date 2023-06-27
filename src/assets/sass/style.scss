@@ -1,0 +1,19 @@
+@use "base/colors.scss";
+@use "base/global.scss";
+@use "base/grid.scss";
+@use "base/transition.scss";
+@use "base/scroll.scss";
+@use "base/typography.scss";
+@use "base/spacings.scss";
+
+@use "components/header.scss";
+@use "components/three.scss";
+@use "components/button.scss";
+
+@use "sections/hero.scss";
+
+.line-x {
+    width: 100%;
+    height: 1px;
+    background-color: #9992;
+}

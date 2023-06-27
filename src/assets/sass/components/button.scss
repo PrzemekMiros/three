@@ -1,0 +1,83 @@
+
+.circle-btn {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    display: inline-block;
+    background-color: var(--color-accent-1);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: all;
+    cursor: pointer
+  }
+  
+  .circle-btn .btn-fill {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: .35s cubic-bezier(0.65, 0, 0.35, 1)
+  }
+  
+  .circle-btn:hover .btn-fill {
+    transform: scale(1)
+  }
+  
+  .circle-btn-text {
+    width: 55px;
+    color: #fef6e4;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: upercase;
+    transition: color .35s cubic-bezier(0.65, 0, 0.35, 1);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .circle-btn svg {
+    position: absolute;
+    width: 135%
+  }
+
+  .textcircle {
+    font-size: 21px;
+    font-weight: 600;
+    fill: #fff;
+    text-transform: uppercase;
+    transition: fill .35s cubic-bezier(0.65, 0, 0.35, 1);
+    transform-origin: 250px 250px;
+    animation: 15s rotate linear infinite;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .circle-btn-text img {
+    margin-top: 25px;
+    width: 400px;
+    transform: translateX(-142px);
+  }
+  
+  .circle-btn:hover .circle-btn-text img {
+    transform: translateX(-208px);
+  }
+
+  .circle-btn:hover .textcircle {
+    fill: #111;
+  }
+  
+
+  .btn-trans-down {
+    transform: translateY(33%);
+  }

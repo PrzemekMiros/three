@@ -1,0 +1,32 @@
+
+.site-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    pointer-events: none;
+    z-index: 999
+}
+
+.site-logo a {
+    display: inline-block;
+    pointer-events: all;
+}
+
+.main-nav ul {
+    text-align: end;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin-left: 2.5em;
+}
+
+.main-nav ul li a {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    pointer-events: all;
+}

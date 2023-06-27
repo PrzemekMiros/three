@@ -1,0 +1,73 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Telegraf';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/telegraf/telegraf-regular.eot');
+    src: url('/assets/fonts/telegraf/telegraf-regular.woff2') format('woff2'),
+         url('/assets/fonts/telegraf/telegraf-regular.woff') format('woff'),
+         url('/assets/fonts/telegraf/telegraf-regular.ttf') format('truetype'),
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Telegraf';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/assets/fonts/telegraf/telegraf-medium.eot');
+    src: url('/assets/fonts/telegraf/telegraf-medium.woff2') format('woff2'),
+         url('/assets/fonts/telegraf/telegraf-medium.woff') format('woff'),
+         url('/assets/fonts/telegraf/telegraf-medium.ttf') format('truetype'),
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Telegraf';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/telegraf/telegraf-bold.eot');
+    src: url('/assets/fonts/telegraf/telegraf-bold.woff2') format('woff2'),
+         url('/assets/fonts/telegraf/telegraf-bold.woff') format('woff'),
+         url('/assets/fonts/telegraf/telegraf-bold.ttf') format('truetype'),
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+h1, .h1 {
+    font-size: 12vw;
+    line-height: 1.1;
+    color: var(--color-accent-1);
+}
+h2, .h2 {
+    font-size: 8vw;
+    line-height: 1.25;
+}
+h3, .h3 {
+    font-size: 5vw;
+    line-height: 1.3;
+    font-weight: 500
+}
+h4, .h4 {
+    font-size: 3vw;
+    line-height: 1.35;
+    font-weight: 500
+}
+h5, .h5 {
+    font-size: 1.7vw;
+    line-height: 1.4;
+    font-weight: 500
+}
+h6, .h6 {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    font-weight: 500
+}
+p {
+    line-height: 1.75;
+}
+
+
+.line-parent, .word {
+    overflow: hidden;
+}
