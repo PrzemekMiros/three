@@ -33,15 +33,24 @@ var light3 = new THREE.DirectionalLight(0xffffff, 1);
 light3.position.set(0, -1, 0); // Światło z dołu
 scene.add(light3);
 
-// Funkcja aktualizująca wymiary renderera i kamery
-function updateSize() {
-  var width = canvas.offsetWidth;
-  var height = canvas.offsetHeight;
+  // Funkcja aktualizująca wymiary renderera i kamery
+  function updateSize() {
+    var width = canvas.offsetWidth;
+    var height = canvas.offsetHeight;
 
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
+    if (width < 768) {
+      // Zmniejszanie walca o 40% przy szerokości ekranu poniżej 768px
+      var scale = 0.6;
+      cylinder.scale.set(scale, scale, scale);
+    } else {
+      // Przywracanie domyślnego rozmiaru walca
+      cylinder.scale.set(1, 1, 1);
+    }
 
-  renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(width, height);
 
   // Przesunięcie walca na skos
   // cylinder.rotation.x = Math.PI / 1; // Obrót o 45 stopni wzdłuż osi X

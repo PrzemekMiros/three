@@ -26,10 +26,6 @@
     transition: .35s cubic-bezier(0.65, 0, 0.35, 1)
   }
   
-  .circle-btn:hover .btn-fill {
-    transform: scale(1)
-  }
-  
   .circle-btn-text {
     width: 55px;
     color: #fef6e4;
@@ -69,6 +65,11 @@
     transform: translateX(-142px);
   }
   
+@media(min-width:767px) {
+  .circle-btn:hover .btn-fill {
+    transform: scale(1)
+  }
+  
   .circle-btn:hover .circle-btn-text img {
     transform: translateX(-208px);
   }
@@ -76,8 +77,7 @@
   .circle-btn:hover .textcircle {
     fill: #111;
   }
-  
-
   .btn-trans-down {
     transform: translateY(33%);
   }
+}
