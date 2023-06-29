@@ -7,7 +7,7 @@ var scene = new THREE.Scene();
 
 // Inicjalizacja kamery
 var camera = new THREE.PerspectiveCamera(15, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
-camera.position.z = 25;
+camera.position.z = 28;
 
 // Inicjalizacja renderera z przeźroczystym tłem
 var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
