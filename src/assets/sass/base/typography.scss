@@ -1,5 +1,4 @@
 @font-face {
-    font-display: swap;
     font-family: 'Telegraf';
     font-style: normal;
     font-weight: 400;
@@ -9,7 +8,6 @@
          url('/assets/fonts/telegraf/telegraf-regular.ttf') format('truetype'),
 }
 @font-face {
-    font-display: swap;
     font-family: 'Telegraf';
     font-style: normal;
     font-weight: 500;
@@ -19,7 +17,6 @@
          url('/assets/fonts/telegraf/telegraf-medium.ttf') format('truetype'),
 }
 @font-face {
-    font-display: swap;
     font-family: 'Telegraf';
     font-style: normal;
     font-weight: 600;
@@ -35,7 +32,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-weight: 600;
 }
 h1, .h1 {
-    font-size: 15vw;
+    font-size: 15vw; 
     line-height: 1.1;
     color: var(--color-accent-1);
 }
@@ -86,7 +83,7 @@ p {
         font-size: 3vw
     }
     h5, .h5 {
-        font-size: 1.7vw
+        font-size: 2vw
     }
     h6, .h6 {
         font-size: 1.5vw

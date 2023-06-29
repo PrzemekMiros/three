@@ -99,6 +99,38 @@ splitTextLines.forEach(element =>{
     })
 });
 
+// Fade in
+const fadeIn = gsap.utils.toArray('.fade-in');
+fadeIn.forEach(fadeInItem => {
+  gsap.from(fadeInItem, { 
+    opacity: 0,
+    y: 30,
+    duration: 2,
+    delay: 0.3,
+    ease: Expo. easeOut,
+    scrollTrigger: {
+      scroller: ".smooth-scroll",
+      trigger: fadeInItem,
+      start: "top 90%",
+    }
+})
+});
+
+// Line animation
+const lineX = gsap.utils.toArray('.line-x');
+lineX.forEach(lineXItem => {
+gsap.from(lineXItem, { 
+width: "0",
+duration: 2.5,
+delay: 0.5,
+ease: Expo. easeOut,
+scrollTrigger: {
+scroller: ".smooth-scroll",
+trigger: lineXItem,
+start: "top 90%",
+}
+})
+});
 
 }
   

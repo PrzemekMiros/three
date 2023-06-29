@@ -1,4 +1,13 @@
 :root {
     --color-accent-1: #9850ff;
+    --color-light-1: #ffffff;
     --color-dark-1: #1c1f24;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-accent-1: #9850ff;
+        --color-light-1: #1c1f24;
+        --color-dark-1: #ffffff;
+    }    
+  }
