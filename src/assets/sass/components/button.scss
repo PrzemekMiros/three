@@ -1,8 +1,8 @@
 
 .circle-btn {
     position: relative;
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     display: inline-block;
     background-color: var(--color-accent-1);
     border-radius: 100%;
@@ -81,6 +81,13 @@
   .trans-btn::before {
 
   }
+
+  .btn-trans-down {
+    transform: translateY(33%);
+  }
+  .btn-trans-down-75 {
+    transform: translateY(75%);
+  }
   
 @media(min-width:767px) {
   .circle-btn {
@@ -98,13 +105,13 @@
   .circle-btn:hover .textcircle {
     fill: #111;
   }
+  .trans-btn {
+    width: auto
+  }
   .btn-trans-down {
     transform: translateY(33%);
   }
   .btn-trans-down-75 {
     transform: translateY(75%);
-  }
-  .trans-btn {
-    width: auto
   }
 }

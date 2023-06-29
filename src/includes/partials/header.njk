@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 </head>
 <body>
-    <div class="smooth-scroll">
+    <div id="target-wrap" class="smooth-scroll">
     <header class="site-header">
         <div class="container-xl">
             <div class="row">
@@ -57,4 +57,6 @@
             </div>
         </div>
     </header>
-    <main id="swup" class="transition-fade">
+    <div id="swup" class="transition-fade">
+    <div class="progress-bar" data-scroll data-scroll-sticky data-scroll-target="#target-wrap"></div>
+    <main>

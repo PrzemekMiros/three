@@ -1,8 +1,10 @@
 .transition-fade {
     transition: 0.4s;
+    filter: blur(0);
     opacity: 1;
   }
   
   html.is-animating .transition-fade {
+    filter: blur(40px);
     opacity: 0;
   }

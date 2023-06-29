@@ -20,3 +20,9 @@
 .pb-xsmall {
     padding-bottom: 20px;
 }
+
+@media(min-width:767px) {
+    .pt-md-medium {
+        padding-top: 60px;
+    }
+}
