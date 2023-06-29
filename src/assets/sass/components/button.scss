@@ -1,8 +1,8 @@
 
 .circle-btn {
     position: relative;
-    width: 170px;
-    height: 170px;
+    width: 90px;
+    height: 90px;
     display: inline-block;
     background-color: var(--color-accent-1);
     border-radius: 100%;
@@ -64,8 +64,29 @@
     width: 400px;
     transform: translateX(-142px);
   }
+
+  .trans-btn {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 1.5em 2.5em;
+    margin-bottom: .8em;
+    margin-right: .6em;
+    border: 2px solid #9992;
+    border-radius: 45px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .trans-btn::before {
+
+  }
   
 @media(min-width:767px) {
+  .circle-btn {
+    width: 170px;
+    height: 170px;
+  }
   .circle-btn:hover .btn-fill {
     transform: scale(1)
   }
@@ -79,5 +100,11 @@
   }
   .btn-trans-down {
     transform: translateY(33%);
+  }
+  .btn-trans-down-75 {
+    transform: translateY(75%);
+  }
+  .trans-btn {
+    width: auto
   }
 }

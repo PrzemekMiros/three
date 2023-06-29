@@ -127,7 +127,7 @@ ease: Expo. easeOut,
 scrollTrigger: {
 scroller: ".smooth-scroll",
 trigger: lineXItem,
-start: "top 90%",
+start: "top 95%",
 }
 })
 });
