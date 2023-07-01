@@ -1,5 +1,10 @@
-html.has-scroll-smooth {
+  html.has-scroll-smooth {
+    bottom: 0;
+    left: 0;
     overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0
   }
   html.has-scroll-dragging {
     -webkit-user-select: none;
@@ -80,6 +85,6 @@ html.has-scroll-smooth {
     left: 0;
     width: 10px;
     height: 0;
-    background: #fff;
+    background: var(--color-accent-1);
     z-index: 999
   }

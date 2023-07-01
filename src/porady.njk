@@ -3,8 +3,10 @@ layout: "layouts/page.njk"
 title: Porady
 ---
 
-<section style="height: 100vh">
+<section>
     <div class="container">
-
+        {% for post in collections.posts.slice(0,2) %}
+            <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy"/>
+        {% endfor %}
     </div>
 </section>
