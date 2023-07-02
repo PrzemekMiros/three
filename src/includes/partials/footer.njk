@@ -113,19 +113,22 @@ ScrollTrigger.scrollerProxy(".smooth-scroll", {
     ? "transform"
     : "fixed"*/
 });
+new ResizeObserver(() => locoScroll.update()).observe(document.querySelector(".smooth-scroll"));
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 </script>
 
 <script src="https://unpkg.com/swup@3"></script>
 <script>
-    const swup = new Swup();
+    const swup = new Swup({
+          animateHistoryBrowsing: true
+    });
     document.addEventListener("swup:animationInStart", () => {
         locoScroll.destroy();locoScroll.init();scrollTo(top);progressBar();
-});
+    });
     document.addEventListener('swup:contentReplaced', function () {
         GSAPAnimations();threeAnimation();
-});
+    });
 </script>
 <script>GSAPAnimations();threeAnimation();progressBar();</script>
 </body>

@@ -20,6 +20,10 @@ module.exports = function(eleventyConfig) {
       return collectionApi.getFilteredByGlob('src/realizacje/**/*.md').reverse();
     });
 
+    // Date
+    eleventyConfig.addFilter('dateDisplay', require('./src/filters/date-display.js'));
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
     // Return your Object options:
     return {
       dir: {
