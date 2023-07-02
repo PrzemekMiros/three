@@ -20,45 +20,55 @@
     font-family: 'Telegraf';
     font-style: normal;
     font-weight: 600;
+    src: url('/assets/fonts/telegraf/telegraf-semibold.eot');
+    src: url('/assets/fonts/telegraf/telegraf-semibold.woff2') format('woff2'),
+         url('/assets/fonts/telegraf/telegraf-semibold.woff') format('woff'),
+         url('/assets/fonts/telegraf/telegraf-semibold.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'Telegraf';
+    font-style: normal;
+    font-weight: 700;
     src: url('/assets/fonts/telegraf/telegraf-bold.eot');
     src: url('/assets/fonts/telegraf/telegraf-bold.woff2') format('woff2'),
          url('/assets/fonts/telegraf/telegraf-bold.woff') format('woff'),
          url('/assets/fonts/telegraf/telegraf-bold.ttf') format('truetype'),
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+.xl, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 600;
 }
-h1, .h1 {
-    font-size: 15vw; 
+.xl {
+    font-size: 18vw; 
     line-height: 1.1;
     color: var(--color-accent-1);
+    font-weight: 700
+}
+h1, .h1 {
+    font-size: 12vw; 
+    line-height: 1.1;
 }
 h2, .h2 {
-    font-size: 13vw;
+    font-size: 9vw;
     line-height: 1.15;
 }
 h3, .h3 {
-    font-size: 10vw;
-    line-height: 1.2;
-    font-weight: 500
+    font-size: 8vw;
+    line-height: 1.2
 }
 h4, .h4 {
-    font-size: 8vw;
-    line-height: 1.25;
-    font-weight: 500
+    font-size: 7vw;
+    line-height: 1.25
 }
 h5, .h5 {
     font-size: 6vw;
-    line-height: 1.3;
-    font-weight: 500
+    line-height: 1.3
 }
 h6, .h6 {
     font-size: 4vw;
-    line-height: 1.4;
-    font-weight: 500
+    line-height: 1.4
 }
 p {
     font-size: 3vw;
@@ -69,15 +79,31 @@ p {
     overflow: hidden;
 }
 
+.split-text-letters .word {
+    margin-bottom: -.2em;
+    margin-top: -.2em;
+    line-height: 1;
+}
+
+.split-text-letters .word .char-parent {
+    margin-bottom: -.2em;
+    margin-top: -.2em;
+    line-height: 1;
+    overflow: hidden
+}
+
 @media(min-width:767px) {
+    .xl {
+        font-size: 10vw
+    }
     h1, .h1 {
-        font-size: 12vw
+        font-size: 9vw
     }
     h2, .h2 {
-        font-size: 8vw
+        font-size: 6vw
     }
     h3, .h3 {
-        font-size: 5.2vw
+        font-size: 4vw
     }
     h4, .h4 {
         font-size: 3vw
@@ -86,7 +112,7 @@ p {
         font-size: 2vw
     }
     h6, .h6 {
-        font-size: 1.5vw
+        font-size: 1.2vw
     }
     p {
         font-size: 1vw

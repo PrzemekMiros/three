@@ -19,7 +19,14 @@ ul li {
     list-style: none;
 }
 
-img {
+img,
+video {
     width: 100%;
     height: auto;
+}
+
+@media(min-width:767px) {
+    html {
+        overflow: hidden
+    }
 }

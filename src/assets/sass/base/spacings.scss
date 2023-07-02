@@ -1,3 +1,6 @@
+.pt-xxlarge {
+    padding-top: 150px;
+}
 .pt-xlarge {
     padding-top: 120px;
 }
@@ -15,6 +18,9 @@
 .pb-xlarge {
     padding-bottom: 120px;
 }
+.pb-large {
+    padding-bottom: 90px;
+}
 .pb-medium {
     padding-bottom: 60px;
 }
@@ -26,6 +32,9 @@
 }
 
 @media(min-width:767px) {
+    .pt-md-xlarge {
+        padding-top: 120px;
+    }
     .pt-md-medium {
         padding-top: 60px;
     }

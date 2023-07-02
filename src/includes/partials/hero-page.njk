@@ -1,13 +1,20 @@
 <section class="hero">
-    <div class="hero-wrap container pt-large pb-xlarge">
+    <div class="hero-wrap container pt-xxlarge pb-xlarge">
       <canvas id="roller"></canvas>
       <div class="hero-gradient-wrap">
         <div class="hero-gradient"></div>
       </div>
       <div class="hero-content">
         <div class="row">
-          <div class="offset-md-9 col-md-3">
+          <div class="col-11 col-md-5">
+            <p class="h5 split-text-lines mb-5">
+              {{ description }}
+            </p>
+          </div>
+          <div class="offset-7 offset-md-3 col-5 col-md-2 d-none d-md-block">
             <div class="btn-trans-down">
+              <div data-scroll data-scroll-speed="-2"
+              data-scroll-direction="horizontal">
               <a href="/uslugi"
                 class="circle-btn magnetic"
                 data-strength="100"
@@ -44,12 +51,13 @@
                   </g>
                 </svg>
               </a>
+              </div>
             </div>
           </div>
         </div>
         <div class="line-x"></div>
         <div>
-          <h1 class="split-text-letters mt-5 mb-0">{{ title }}</h1>
+          <h1 class="xl split-text-letters mt-5 mb-5 mb-md-4">{{ title }}</h1>
         </div>
         <div class="line-x"></div>
       </div>

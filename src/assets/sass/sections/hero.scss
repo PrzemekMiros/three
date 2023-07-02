@@ -17,8 +17,8 @@
   }
   
 .hero-gradient {
-    height: 21em;
-    width: 32em;
+    height: 8em;
+    width: 12em;
     background-image: linear-gradient(
       90deg,
       #a834eb,
@@ -58,3 +58,14 @@
     }
   }
   
+@media(min-width:767px) {
+.hero-gradient-wrap {
+  right: 33%;
+  top: 37%
+}
+
+.hero-gradient {
+  height: 21em;
+  width: 32em
+}
+}

@@ -85,7 +85,7 @@ function updateRotation(event) {
       cylinder.rotation.y = rotation.y;
     }
   });
-}
+}  
 
 // Funkcja resetująca rotację walca do pozycji wyjściowej
 function resetRotation() {

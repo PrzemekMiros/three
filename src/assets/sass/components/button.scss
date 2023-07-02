@@ -22,7 +22,7 @@
     border-radius: 50%;
     top: 0;
     left: 0;
-    transform: scale(0);
+    transform: translateY(100%);
     transition: .35s cubic-bezier(0.65, 0, 0.35, 1)
   }
   
@@ -81,7 +81,7 @@
 
   .trans-btn-text {
     color: var(--color-dark-1);
-    transition: .3s ease-in-out
+    transition: color .3s ease-in-out
   }
 
   .trans-btn::before {
@@ -98,19 +98,11 @@
     z-index: -1;
   }
 
-  .trans-btn:hover::before {
-    transform: translateY(0%);
-  }
-
-  .trans-btn:hover .trans-btn-text {
-    color: #fff
-  }
-
   .btn-trans-down {
     transform: translateY(33%);
   }
   .btn-trans-down-75 {
-    transform: translateY(75%);
+    transform: translateY(55%);
   }
   
 @media(min-width:767px) {
@@ -119,23 +111,27 @@
     height: 170px;
   }
   .circle-btn:hover .btn-fill {
-    transform: scale(1)
+    transform: translateY(0%)
   }
-  
   .circle-btn:hover .circle-btn-text img {
     transform: translateX(-208px);
   }
-
   .circle-btn:hover .textcircle {
     fill: #111;
   }
   .trans-btn {
     width: auto
   }
+  .trans-btn:hover::before {
+    transform: translateY(0%);
+  }
+  .trans-btn:hover .trans-btn-text {
+    color: #fff
+  }
   .btn-trans-down {
     transform: translateY(33%);
   }
   .btn-trans-down-75 {
-    transform: translateY(75%);
+    transform: translateY(60%);
   }
 }

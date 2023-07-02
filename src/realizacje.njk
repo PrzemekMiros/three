@@ -1,6 +1,19 @@
 ---
 layout: "layouts/page.njk"
 title: Realizacje
+description: Tutaj znajdziesz wybrane realizacje stron i sklepów
 ---
 
-<section style="height: 100vh"></section>
+<section class="pb-xlarge">
+    <div class="container">
+        {% for post in collections.works.slice(0,10) %}
+            <div class="offset-md-2 col-md-8 pt-small pb-medium">
+                <p class="split-text-lines"><small>{{ post.data.date | dateDisplay }}</small></p>
+                <h2 class="h5 split-text-lines mt-5">{{ post.data.title }}</h2>
+            </div>
+            <div class="offset-md-2 col-md-8 pt-medium pb-medium">
+                <div class="line-x"></div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
