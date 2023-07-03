@@ -78,7 +78,8 @@ p {
     font-size: 3vw;
     line-height: 1.75;
     font-weight: 400;
-    opacity: .8
+    letter-spacing: .05em;
+    opacity: .85
 }
 
 .line-parent, .word {
@@ -100,13 +101,13 @@ p {
 
 @media(min-width:767px) {
     .xl {
-        font-size: 10vw
+        font-size: 12vw
     }
     h1, .h1 {
         font-size: 9vw
     }
     h2, .h2 {
-        font-size: 6vw
+        font-size: 4.5vw
     }
     h3, .h3 {
         font-size: 4vw
@@ -121,6 +122,6 @@ p {
         font-size: 1.2vw
     }
     p {
-        font-size: 1vw
+        font-size: 1.15vw
     }
 }

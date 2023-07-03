@@ -131,7 +131,7 @@ start: "top 95%",
 })
 });
 
-// Acordion
+// Accordion
 if (document.querySelector(".accordion")) {
   let t = document.getElementsByClassName("accordion");
     for (let e = 0; e < t.length; e++) t[e].addEventListener("click", function () {
@@ -142,8 +142,33 @@ if (document.querySelector(".accordion")) {
         e.style.maxHeight = e.scrollHeight + "px", this.classList.toggle("open");
       }
     });
-}
+  };
 
+// Footer parallax
+if (window.matchMedia("(min-width: 767px)").matches) {
+  gsap.from(".footer-parallax", {
+    y: "-25%",
+    opacity: 0,
+    scrollTrigger: {
+      scroller: ".smooth-scroll",
+      trigger: ".site-footer",
+      start: "top 95%",
+      end: "bottom 90%",
+      scrub: true
+    }
+  });
+  } else {
+    gsap.from(".footer-parallax", {
+      y: "-15%",
+      opacity: 0,
+      scrollTrigger: {
+        scroller: ".smooth-scroll",
+        trigger: ".site-footer",
+        start: "top 95%",
+        end: "bottom 90%",
+        scrub: true
+      }
+    });
+  };
+  new ResizeObserver(() => locoScroll.update()).observe(document.querySelector(".smooth-scroll"));
 };
-
-  

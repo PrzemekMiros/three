@@ -1,13 +1,24 @@
 :root {
     --color-accent-1: #9850ff;
     --color-light-1: #ffffff;
+    --color-light-2: #eff0f3;
     --color-dark-1: #1c1f24;
+    --color-dark-2: #181b21;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-accent-1: #9850ff;
         --color-light-1: #1c1f24;
+        --color-light-2: #181b21;
         --color-dark-1: #ffffff;
+        --color-dark-2: #eff0f3;
     }    
+  }
+
+  .bg-light-2 {
+    background-color: var(--color-light-2)
+  }
+  .bg-dark-2 {
+    background-color: var(--color-dark-2)
   }
