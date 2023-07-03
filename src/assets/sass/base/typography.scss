@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Telegraf';
-    display: swap;
+    font-display: swap;
     font-style: normal;
     font-weight: 400;
     src: url('/assets/fonts/telegraf/telegraf-regular.eot');
@@ -10,7 +10,7 @@
 }
 @font-face {
     font-family: 'Telegraf';
-    display: swap;
+    font-display: swap;
     font-style: normal;
     font-weight: 500;
     src: url('/assets/fonts/telegraf/telegraf-medium.eot');
@@ -20,7 +20,7 @@
 }
 @font-face {
     font-family: 'Telegraf';
-    display: swap;
+    font-display: swap;
     font-style: normal;
     font-weight: 600;
     src: url('/assets/fonts/telegraf/telegraf-semibold.eot');
@@ -30,7 +30,7 @@
 }
 @font-face {
     font-family: 'Telegraf';
-    display: swap;
+    font-display: swap;
     font-style: normal;
     font-weight: 700;
     src: url('/assets/fonts/telegraf/telegraf-bold.eot');
@@ -77,6 +77,8 @@ h6, .h6 {
 p {
     font-size: 3vw;
     line-height: 1.75;
+    font-weight: 400;
+    opacity: .8
 }
 
 .line-parent, .word {

@@ -7,7 +7,7 @@ imageMain: /realizacje/img/business-img.jpg
 imageGridOne: /realizacje/img/longscroll-1.jpg
 imageGridTwo: /realizacje/img/longscroll-2.jpg
 title: Portal kobiet biznesu
-description: Serwis dla czasopisma Business Woman and Life. Indywidualny projekt graficzny i dedykowany motyw na Wordpressa.
+description: Serwis dla czasopisma Business Woman and Life. Indywidualny projekt graficzny i dedykowany motyw na Wordpressa. Ogłoszenia, sklep, płatności online.
 link: https://businesswomanlife.pl/
 imageMobile: /realizacje/img/longscroll-mobile.jpg
 category:

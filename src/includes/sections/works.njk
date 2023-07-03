@@ -5,6 +5,7 @@
         </h2>
         {% for post in collections.works.slice(0,3) %}
             <div class="pt-medium pb-medium">
+                <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy"/>
                 <h3 class="h4 split-text-lines">{{ post.data.title }}</h3>
             </div>
             <div class="line-x"></div>  

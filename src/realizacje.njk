@@ -6,14 +6,30 @@ description: Tutaj znajdziesz wybrane realizacje stron i sklepów
 
 <section class="pb-xlarge">
     <div class="container">
-        {% for post in collections.works.slice(0,10) %}
-            <div class="offset-md-2 col-md-8 pt-small pb-medium">
-                <p class="split-text-lines"><small>{{ post.data.date | dateDisplay }}</small></p>
-                <h2 class="h5 split-text-lines mt-5">{{ post.data.title }}</h2>
+        {% for post in collections.works %}
+            <div class="row flex-md-row-reverse pb-large pt-large">
+                <div class="offset-md-1 col-md-6">
+                    <div class="">
+                        <img src="{{ post.data.thumbnail }}" class="mb-5 mb-md-0" alt="{{ post.data.title }}" loading="lazy"/>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                    <div class="">
+                        <p class="split-text-lines mt-0"><small>{{ post.data.client }}</small></p>
+                        <h2 class="h5 split-text-lines my-4">{{ post.data.title }}</h2>
+                        <p class="split-text-lines mb-4">{{ post.data.description }}</p>
+                        <a href="{{ post.data.link }}" title="Zobacz więcej" target="_blank" class="button magnetic" data-strength="100" data-strength-text="50"> 
+                            <span class="btn-text">Zobacz więcej
+                                <svg width="11" height="11" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 1L1 13" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3 1H13V11" stroke="var(--color-accent-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="offset-md-2 col-md-8 pt-medium pb-medium">
-                <div class="line-x"></div>
-            </div>
+            <div class="line-x"></div>
         {% endfor %}
     </div>
 </section>
