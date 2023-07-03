@@ -13,12 +13,13 @@
               data-scroll-direction="horizontal">
               <a href="/kontakt"
                 class="circle-btn magnetic"
+                title="Kontakt"
                 data-strength="100"
                 data-strength-text="50"
               >
                 <div class="btn-fill"></div>
                 <span class="circle-btn-text">
-                  <img src="/assets/img/hands.png" alt="" />
+                  <img src="/assets/img/hands.png" alt="Hands" width="816" height="162" />
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,11 +75,7 @@
 <!--
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.153.0/three.min.js"></script>
 -->
-<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-<script src="https://www.futurewebstudio.pl/assets/js/gsap-split-text.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/swup@3"></script>
+<script src="/assets/js/vendor.js"></script>
 <!--
 <script src="/assets/js/three.js"></script>
 -->
@@ -134,9 +131,9 @@ ScrollTrigger.refresh();
         locoScroll.destroy();locoScroll.init();scrollTo(top);progressBar();
     });
     document.addEventListener('swup:contentReplaced', function () {
-        GSAPAnimations();threeAnimation();
+        GSAPAnimations();
     });
 </script>
-<script>GSAPAnimations();threeAnimation();progressBar();</script>
+<script>GSAPAnimations();progressBar();</script>
 </body>
 </html>
