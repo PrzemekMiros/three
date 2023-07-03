@@ -51,7 +51,7 @@ scene.add(light3);
     camera.updateProjectionMatrix();
 
     renderer.setSize(width, height);
-
+ 
   // Przesunięcie walca na skos
   // cylinder.rotation.x = Math.PI / 1; // Obrót o 45 stopni wzdłuż osi X
   cylinder.rotation.z = Math.PI / 4; // Obrót o 45 stopni wzdłuż osi Z
