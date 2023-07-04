@@ -1,3 +1,4 @@
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = function(eleventyConfig) {
 
@@ -9,6 +10,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/realizacje/img");
 
     eleventyConfig.addWatchTarget("src/assets/sass");
+    
+    eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
 
     // Collections blog
     eleventyConfig.addCollection('posts', function(collectionApi) {
