@@ -83,7 +83,6 @@
     </div>
 </footer>
 </div>
-</div>
 
 <script src="/assets/js/vendor.js"></script>
 <script src="/assets/js/gsap.js"></script>
@@ -100,19 +99,15 @@ function raf(time) {
 requestAnimationFrame(raf)
 </script>
 <script>
-
   const swup = new Swup({
   animateHistoryBrowsing: true
   });
-
   document.addEventListener('swup:contentReplaced', function () {
   GSAPAnimations();window.scrollTo( 0, 0, ); 
   });
-
   window.addEventListener('load', function(){
   GSAPAnimations();
   });
-
 </script>
 
 </body>

@@ -1,11 +1,20 @@
 .transition-fade {
-    transition: 0.4s;
-    filter: blur(0);
-    opacity: 1;
+    transition: 0.35s;
+    filter: blur(0px), grayscale(0%);
+    opacity: 1
   }
   
   html.is-animating .transition-fade {
-    filter: blur(40px);
-    opacity: 0;
+    filter: blur(40px), grayscale(100%);
+    opacity: 0
   }
 
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background-color: var(--color-accent-1); 
+    z-index: 9999;
+  }

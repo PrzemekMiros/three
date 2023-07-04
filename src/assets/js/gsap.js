@@ -103,12 +103,29 @@ splitTextLines.forEach(element =>{
 const fadeIn = gsap.utils.toArray('.fade-in');
 fadeIn.forEach(fadeInItem => {
   gsap.from(fadeInItem, { 
+    autoAlpha: 0,
     opacity: 0,
     y: 30,
     duration: .75,
     ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: fadeInItem,
+      start: "top 90%",
+    }
+})
+});
+
+// Scale in
+const scaleIn = gsap.utils.toArray('.scale-in');
+scaleIn.forEach(scaleInItem => {
+  gsap.from(scaleInItem, { 
+    autoAlpha: 0,
+    opacity: 0,
+    scale: 0,
+    duration: .75,
+    ease: Power3.easeInOut,
+    scrollTrigger: {
+      trigger: scaleInItem,
       start: "top 90%",
     }
 })
@@ -148,14 +165,14 @@ revealContainers.forEach((element) => {
   let image = element.querySelector(".reveal-image");
   gsap.set(element, { autoAlpha: 1 }); 
 
-  gsap.from(element, 1.3, {
+  gsap.from(element, 1.5, {
     xPercent: -102,
     ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: element
     }
   });
-  gsap.from(image, 1.3, {
+  gsap.from(image, 1.5, {
     xPercent: 102,
     scale: 1.3,
     ease: Power3.easeInOut,
@@ -209,6 +226,30 @@ if (window.matchMedia("(min-width: 767px)").matches) {
     });
   };
 
+  // Funkcja do aktualizowania wysokości paska postępu
+function updateProgressBar() {
+  var scrollTop = document.documentElement.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight;
+  var clientHeight = document.documentElement.clientHeight;
+  var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+
+  var progressBar = document.getElementById('progress-bar');
+  progressBar.style.height = progress + '%';
+}
+
+// Ustawianie paska postępu na 0% po załadowaniu strony
+window.addEventListener('load', function() {
+  var progressBar = document.getElementById('progress-bar');
+  progressBar.style.height = '0%';
+
+  // Wywołanie funkcji updateProgressBar() po chwili, aby dostosować wysokość
+  updateProgressBar();
+});
+
+// Dodawanie nasłuchiwania przewijania strony do aktualizacji paska postępu
+window.addEventListener('scroll', updateProgressBar);
+
+  
 };
 
 
