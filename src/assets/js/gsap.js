@@ -225,30 +225,17 @@ if (window.matchMedia("(min-width: 767px)").matches) {
       }
     });
   };
-
-  // Funkcja do aktualizowania wysokości paska postępu
-function updateProgressBar() {
-  var scrollTop = document.documentElement.scrollTop;
-  var scrollHeight = document.documentElement.scrollHeight;
-  var clientHeight = document.documentElement.clientHeight;
-  var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-
-  var progressBar = document.getElementById('progress-bar');
-  progressBar.style.height = progress + '%';
-}
-
-// Ustawianie paska postępu na 0% po załadowaniu strony
-window.addEventListener('load', function() {
-  var progressBar = document.getElementById('progress-bar');
-  progressBar.style.height = '0%';
-
-  // Wywołanie funkcji updateProgressBar() po chwili, aby dostosować wysokość
-  updateProgressBar();
-});
-
-// Dodawanie nasłuchiwania przewijania strony do aktualizacji paska postępu
-window.addEventListener('scroll', updateProgressBar);
-
+  
+  window.addEventListener('scroll', function() {
+    // Obliczanie postępu przewijania strony
+    var scrollTop = document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight;
+    var clientHeight = document.documentElement.clientHeight;
+    var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    // Ustawianie wysokości paska postępu
+    var progressBar = document.getElementById('progress-bar');
+    progressBar.style.height = progress + '%';
+  });
   
 };
 
