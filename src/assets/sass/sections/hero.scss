@@ -9,6 +9,14 @@
     z-index: 1;
 }
 
+.hand-img-wrap {
+  position: absolute;
+  top: 61%;
+  right: 10%;
+  width: 41%;
+  transform: translateY(-50%);
+}
+
 .hero-gradient-wrap {
     position: absolute;
     right: 33%;
@@ -59,11 +67,15 @@
   }
   
 @media(min-width:767px) {
+  .hand-img-wrap {
+    top: 50%;
+    right: 32%;
+    width: 21%
+  }
 .hero-gradient-wrap {
   right: 30%;
   top: 41%
 }
-
 .hero-gradient {
   height: 21em;
   width: 32em

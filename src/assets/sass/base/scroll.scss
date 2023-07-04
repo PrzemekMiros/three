@@ -20,6 +20,7 @@ html.lenis {
     left: 0;
     width: 5px;
     height: 0;
+    transition: 0s;
     background-color: var(--color-accent-1); 
     z-index: 9999;
 }
