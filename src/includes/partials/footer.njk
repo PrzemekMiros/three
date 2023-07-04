@@ -1,10 +1,20 @@
 </main>
-<footer class="site-footer bg-light-2 pt-xxlarge pb-xlarge">
+<footer class="site-footer bg-light-2 pt-large pb-large">
+<div class="pt-large"></div>
+  <svg xmlns="http://www.w3.org/2000/svg" class="separator separator--up" width="100%" height="100%" viewBox="0 0 100 10" preserveAspectRatio="none"> 
+    <path 
+    class="path-anim separator__path" 
+    d="M 0 0 C 40 10 60 10 100 0 L 0 0 Z" 
+    data-path-to="M 0 0 C 40 0 60 0 100 0 L 0 0 Z" 
+    vector-effect="non-scaling-stroke">
+    </path> 
+  </svg>
+  
     <div class="footer-parallax">
       <div class="container">
         <div class="row">
           <div class="col-7 col-md-5">
-            <p class="h3 mb-5 ">
+            <p class="h1 mb-5 ">
               Skontaktuj się ze mną 
             </p>
           </div>
@@ -77,7 +87,18 @@
 
 <script src="/assets/js/vendor.js"></script>
 <script src="/assets/js/gsap.js"></script>
-
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+<script>
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+})
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
+</script>
 <script>
 
   const swup = new Swup({
@@ -85,12 +106,12 @@
   });
 
   document.addEventListener('swup:contentReplaced', function () {
-  GSAPAnimations(); window.scrollTo({ top: 0 });
+  GSAPAnimations();window.scrollTo( 0, 0, ); 
   });
 
-window.addEventListener('load', function(){
+  window.addEventListener('load', function(){
   GSAPAnimations();
-});
+  });
 
 </script>
 

@@ -1,9 +1,10 @@
 function GSAPAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
+  window.addEventListener("load", () => gsap.to("body", { autoAlpha: 1 }));
+
 var magnets = document.querySelectorAll('.magnetic');
 var magnetText = document.querySelectorAll(".btn-text");
-var strength = 100;
  
 if(window.innerWidth > 767){
   // Mouse Reset
@@ -60,10 +61,12 @@ splitTextLetters.forEach(element =>{
     charsClass: "char"
   });
   gsap.from(mySplitText.chars, {
-       yPercent: 105,
-       duration: 2,
-       ease: Expo. easeOut,
-       stagger: 0.07,
+       xPercent: -150,
+       autoAlpha: 0,
+       opacity: 0,
+       duration: .75,
+       ease: Power4.easeInOut,
+       stagger: 0.03,
        scrollTrigger: { 
          trigger: element,
          //toggleActions: 'restart pause reverse pause',
@@ -84,10 +87,11 @@ splitTextLines.forEach(element =>{
   });
   gsap.from(mySplitText.lines, {
         autoAlpha: 0,
-        duration: 0.6,
-        stagger: 0.1,
+        opacity: 0,
+        duration: .75,
+        stagger: 0.05,
         yPercent: 105,
-        ease: "sine.out",
+        ease: Power3.easeInOut,
         scrollTrigger: { 
           trigger: element,
           //toggleActions: 'restart pause reverse pause',
@@ -101,9 +105,8 @@ fadeIn.forEach(fadeInItem => {
   gsap.from(fadeInItem, { 
     opacity: 0,
     y: 30,
-    duration: 2,
-    delay: 0.3,
-    ease: Expo. easeOut,
+    duration: .75,
+    ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: fadeInItem,
       start: "top 90%",
@@ -116,9 +119,8 @@ const lineX = gsap.utils.toArray('.line-x');
 lineX.forEach(lineXItem => {
 gsap.from(lineXItem, { 
 width: "0",
-duration: 2.5,
-delay: 0.5,
-ease: Expo. easeOut,
+duration: .75,
+ease: Power3.easeInOut,
 scrollTrigger: {
 trigger: lineXItem,
 start: "top 95%",
@@ -139,22 +141,65 @@ if (document.querySelector(".accordion")) {
     });
   };
 
+// Reveal image
+let revealContainers = document.querySelectorAll(".reveal-wrap");
+
+revealContainers.forEach((element) => {
+  let image = element.querySelector(".reveal-image");
+  gsap.set(element, { autoAlpha: 1 }); 
+
+  gsap.from(element, 1.3, {
+    xPercent: -102,
+    ease: Power3.easeInOut,
+    scrollTrigger: {
+      trigger: element
+    }
+  });
+  gsap.from(image, 1.3, {
+    xPercent: 102,
+    scale: 1.3,
+    ease: Power3.easeInOut,
+    scrollTrigger: {
+      trigger: element
+    }
+  });
+});
+
+const paths = [...document.querySelectorAll('path.path-anim')];
+
+paths.forEach(el => {
+  const svgEl = el.closest('.separator--up');
+  const pathTo = el.dataset.pathTo;
+
+  gsap.timeline({
+      scrollTrigger: {
+          trigger: svgEl,
+          start: "top bottom",
+          end: "bottom 30%",
+          scrub: true
+      }
+  })
+  .to(el, {
+      ease: 'none',
+      attr: { d: pathTo }
+  });
+});
+
+
 // Footer parallax
 if (window.matchMedia("(min-width: 767px)").matches) {
   gsap.from(".footer-parallax", {
-    y: "-25%",
-    opacity: 0,
+    y: "-50%",
     scrollTrigger: {
       trigger: ".site-footer",
-      start: "top 95%",
-      end: "bottom 90%",
+      start: "top 90%",
+      end: "bottom 80%",
       scrub: true
     }
   });
   } else {
     gsap.from(".footer-parallax", {
       y: "-15%",
-      opacity: 0,
       scrollTrigger: {
         trigger: ".site-footer",
         start: "top 95%",

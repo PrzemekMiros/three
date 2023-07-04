@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    scroll-padding-top: 1px
+}
+
 body {
     margin: 0;
     padding: 0;
     background: var(--color-light-1);
     color: var(--color-dark-1);
-    font-family: "Telegraf", sans-serif;
+    font-family: "Telegraf", sans-serif
 }
 
 a {
