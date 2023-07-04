@@ -1,29 +1,26 @@
+@media(min-width:767px) {
 html.lenis {
   height: auto;
 }
-
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
-
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
-
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
 .lenis.lenis-scrolling iframe {
    pointer-events: none;
 } 
-
-  .progress-bar {
+#progress-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 5px;
     height: 0;
-    background: var(--color-accent-1);
-    z-index: 999
-  }
+    background-color: var(--color-accent-1); 
+    z-index: 9999;
+}
+}

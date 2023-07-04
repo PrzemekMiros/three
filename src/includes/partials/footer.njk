@@ -83,21 +83,16 @@
     </div>
 </footer>
 </div>
-
 <script src="/assets/js/vendor.js"></script>
-
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/swup/2.0.8/swup.min.js" integrity="sha512-zarvzsuTnsmBdyGdtt3MSQYTkEBX9aGrG4P9RjNJXPmmNromygeUkZS4NOM6/Ht0O8cvzU0glG+FKULEMDgqbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 -->
-
 <script src="/assets/js/gsap.js"></script>
-
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
 <script>
+if (window.innerWidth > 767) {
 const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -107,14 +102,12 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
-
 lenis.on('scroll', ScrollTrigger.update)
-
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
-
 gsap.ticker.lagSmoothing(0)
+}
 </script>
 <script>
   const swup = new Swup({
@@ -127,6 +120,5 @@ gsap.ticker.lagSmoothing(0)
   GSAPAnimations();
   });
 </script>
-
 </body>
 </html>
