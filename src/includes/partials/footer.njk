@@ -74,70 +74,25 @@
 </footer>
 </div>
 </div>
-<!--
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.153.0/three.min.js"></script>
--->
+
 <script src="/assets/js/vendor.js"></script>
-<!--
-<script src="/assets/js/three.js"></script>
--->
-<script>
-    const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".smooth-scroll"),
-  smooth: true,
-  reloadOnContextChange: !0,
-  multiplier: .75,
-  lerp: .1,
-  touchMultiplier: 4,
-});
-
-function progressBar() {
-  const bar = document.querySelector('.progress-bar');
-  locoScroll.on('scroll', ({ limit, scroll }) => {
-  const progress = scroll.y / limit.y * 100
-  bar.style.height = `${progress}vh`
-});
-}
-
-locoScroll.on("scroll", ScrollTrigger.update);
-ScrollTrigger.scrollerProxy(".smooth-scroll", {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }
-  // follwoing line is not required to work pinning on touch screen
-  /* pinType: document.querySelector(".smooth-scroll").style.transform
-    ? "transform"
-    : "fixed"*/
-});
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-ScrollTrigger.refresh();
-</script>
 <script src="/assets/js/gsap.js"></script>
+
 <script>
-    const swup = new Swup({
-          animateHistoryBrowsing: true
-    });
-    document.addEventListener("swup:animationInStart", () => {
-        locoScroll.destroy();locoScroll.init();scrollTo(top);progressBar();
-    });
-    document.addEventListener('swup:contentReplaced', function () {
-        GSAPAnimations();
-    });
-</script>
-<script>
-  window.addEventListener('load', function(){
-    GSAPAnimations();progressBar();
+
+  const swup = new Swup({
+  animateHistoryBrowsing: true
   });
+
+  document.addEventListener('swup:contentReplaced', function () {
+  GSAPAnimations(); window.scrollTo({ top: 0 });
+  });
+
+window.addEventListener('load', function(){
+  GSAPAnimations();
+});
+
 </script>
+
 </body>
 </html>

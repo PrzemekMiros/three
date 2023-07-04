@@ -1,11 +1,10 @@
 function GSAPAnimations() {
-
-gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
 var magnets = document.querySelectorAll('.magnetic');
 var magnetText = document.querySelectorAll(".btn-text");
 var strength = 100;
-
+ 
 if(window.innerWidth > 767){
   // Mouse Reset
   magnets.forEach( (magnet) => {
@@ -66,7 +65,6 @@ splitTextLetters.forEach(element =>{
        ease: Expo. easeOut,
        stagger: 0.07,
        scrollTrigger: { 
-         scroller: ".smooth-scroll",
          trigger: element,
          //toggleActions: 'restart pause reverse pause',
        },
@@ -91,7 +89,6 @@ splitTextLines.forEach(element =>{
         yPercent: 105,
         ease: "sine.out",
         scrollTrigger: { 
-          scroller: ".smooth-scroll",
           trigger: element,
           //toggleActions: 'restart pause reverse pause',
         },
@@ -108,7 +105,6 @@ fadeIn.forEach(fadeInItem => {
     delay: 0.3,
     ease: Expo. easeOut,
     scrollTrigger: {
-      scroller: ".smooth-scroll",
       trigger: fadeInItem,
       start: "top 90%",
     }
@@ -124,7 +120,6 @@ duration: 2.5,
 delay: 0.5,
 ease: Expo. easeOut,
 scrollTrigger: {
-scroller: ".smooth-scroll",
 trigger: lineXItem,
 start: "top 95%",
 }
@@ -150,7 +145,6 @@ if (window.matchMedia("(min-width: 767px)").matches) {
     y: "-25%",
     opacity: 0,
     scrollTrigger: {
-      scroller: ".smooth-scroll",
       trigger: ".site-footer",
       start: "top 95%",
       end: "bottom 90%",
@@ -162,7 +156,6 @@ if (window.matchMedia("(min-width: 767px)").matches) {
       y: "-15%",
       opacity: 0,
       scrollTrigger: {
-        scroller: ".smooth-scroll",
         trigger: ".site-footer",
         start: "top 95%",
         end: "bottom 90%",
@@ -170,5 +163,10 @@ if (window.matchMedia("(min-width: 767px)").matches) {
       }
     });
   };
-  new ResizeObserver(() => locoScroll.update()).observe(document.querySelector(".smooth-scroll"));
+
 };
+
+
+
+
+
