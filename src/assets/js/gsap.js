@@ -61,10 +61,10 @@ splitTextLetters.forEach(element =>{
     charsClass: "char"
   });
   gsap.from(mySplitText.chars, {
-       xPercent: -150,
+       yPercent: 100,
        autoAlpha: 0,
        opacity: 0,
-       duration: .75,
+       duration: 1.2,
        ease: Power4.easeInOut,
        stagger: 0.03,
        scrollTrigger: { 
@@ -88,10 +88,10 @@ splitTextLines.forEach(element =>{
   gsap.from(mySplitText.lines, {
         autoAlpha: 0,
         opacity: 0,
-        duration: .75,
+        duration: 1.2,
         stagger: 0.05,
         yPercent: 105,
-        ease: Power3.easeInOut,
+        ease: Power4.easeInOut,
         scrollTrigger: { 
           trigger: element,
           //toggleActions: 'restart pause reverse pause',
@@ -105,8 +105,8 @@ fadeIn.forEach(fadeInItem => {
   gsap.from(fadeInItem, { 
     autoAlpha: 0,
     opacity: 0,
-    y: 30,
-    duration: .75,
+    y: 50,
+    duration: 1.2,
     ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: fadeInItem,
@@ -122,7 +122,7 @@ scaleIn.forEach(scaleInItem => {
     autoAlpha: 0,
     opacity: 0,
     scale: 0,
-    duration: .75,
+    duration: 1.2,
     ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: scaleInItem,
@@ -136,7 +136,7 @@ const lineX = gsap.utils.toArray('.line-x');
 lineX.forEach(lineXItem => {
 gsap.from(lineXItem, { 
 width: "0",
-duration: .75,
+duration: 1.2,
 ease: Power3.easeInOut,
 scrollTrigger: {
 trigger: lineXItem,
