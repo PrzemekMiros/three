@@ -1,0 +1,16 @@
+.social-icons {
+    position: fixed;
+top: calc(100vh - 12em);
+left: 0;
+width: 100%;
+right: 0;
+height: 100%;
+pointer-events: none;
+z-index: 9999;
+  }
+
+  .social-icons a {
+    width: 30px;
+    margin-bottom: .3em;
+    pointer-events: all
+  }

@@ -65,6 +65,7 @@ splitTextLetters.forEach(element =>{
        autoAlpha: 0,
        opacity: 0,
        duration: 1.2,
+       delay: 0.1,
        ease: Power4.easeInOut,
        stagger: 0.03,
        scrollTrigger: { 
@@ -89,6 +90,7 @@ splitTextLines.forEach(element =>{
         autoAlpha: 0,
         opacity: 0,
         duration: 1.2,
+        delay: 0.1,
         stagger: 0.05,
         yPercent: 105,
         ease: Power4.easeInOut,
@@ -107,10 +109,11 @@ fadeIn.forEach(fadeInItem => {
     opacity: 0,
     y: 50,
     duration: 1.2,
-    ease: Power3.easeInOut,
+    delay: 0.1,
+    ease: Power4.easeInOut,
     scrollTrigger: {
       trigger: fadeInItem,
-      start: "top 90%",
+      start: "top 98%",
     }
 })
 });
@@ -123,10 +126,11 @@ scaleIn.forEach(scaleInItem => {
     opacity: 0,
     scale: 0,
     duration: 1.2,
-    ease: Power3.easeInOut,
+    delay: 0.1,
+    ease: Power4.easeInOut,
     scrollTrigger: {
       trigger: scaleInItem,
-      start: "top 90%",
+      start: "top 98%",
     }
 })
 });
@@ -137,10 +141,11 @@ lineX.forEach(lineXItem => {
 gsap.from(lineXItem, { 
 width: "0",
 duration: 1.2,
-ease: Power3.easeInOut,
+delay: 0.1,
+ease: Power4.easeInOut,
 scrollTrigger: {
 trigger: lineXItem,
-start: "top 95%",
+start: "top 98%",
 }
 })
 });
@@ -200,6 +205,14 @@ paths.forEach(el => {
       ease: 'none',
       attr: { d: pathTo }
   });
+});
+
+
+// Header bg
+ScrollTrigger.create({
+  start: 'top -70',
+  end: 99999,
+  toggleClass: {className: 'header-scrolled', targets: '.site-header'}
 });
 
 

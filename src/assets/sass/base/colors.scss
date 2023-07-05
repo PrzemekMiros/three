@@ -6,6 +6,20 @@
     --color-dark-2: #12151a;
 }
 
+.dark {
+  --color-light-1: #1c1f24;
+  --color-light-2: #12151a;
+  --color-dark-1: #ffffff;
+  --color-dark-2: #eff0f3;
+}
+
+.light {
+  --color-light-1: #ffffff;
+  --color-light-2: #eff0f3;
+  --color-dark-1: #1c1f24;
+  --color-dark-2: #12151a;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --color-accent-1: #9850ff;

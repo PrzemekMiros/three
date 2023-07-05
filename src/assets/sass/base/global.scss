@@ -14,6 +14,12 @@ body {
     font-family: "Telegraf", sans-serif
 }
 
+main {
+    position: relative;
+    background: var(--color-light-1);
+    z-index: 9
+}
+
 a {
     color: inherit;
     text-decoration: none

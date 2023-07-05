@@ -18,10 +18,10 @@
   
   .icon {
     position: absolute;
-    top: calc(50% - 3px);
+    top: calc(50% - 13px);
     right: -0.4em;
-    width: 20px;
-    height: 3px;
+    width: 28px;
+    height: 5px;
     background: var(--color-accent-1);
     border-radius: 2px;
     opacity: 0.7
@@ -32,10 +32,10 @@
     content: "";
     top: 0;
     right: 0;
-    width: 20px;
-    height: 3px;
+    width: 28px;
+    height: 5px;
     background: var(--color-accent-1);
-    border-radius: 50%;
+    border-radius: 2px;
     transform: rotate(90deg);
     animation-timing-function: cubic-bezier(.79,0,.07,.88);
     transition: 1.3s

@@ -11,14 +11,12 @@
 @use "components/three-scroll.scss";
 @use "components/button.scss";
 @use "components/accordion.scss";
+@use "components/social-icons.scss";
 
 @use "sections/hero.scss";
+@use "sections/footer.scss";
 
-main {
-  position: relative;
-  background: var(--color-light-1);
-  z-index: 9
-}
+
 
 .line-x {
     width: 100%;
@@ -53,25 +51,7 @@ main {
   }
 
 
-  .site-footer {
-    position: relative;
-    box-shadow: inset 0 0 80px #1112;
-    z-index: 1
-  }
-  .footer-parallax {
-    position: relative;
-    z-index: -1
-  }
-  .separator {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: block;
-    height: 5em;
-    fill: var(--color-light-1)
-  }
-  @media(min-width:767px) {
-    .separator {
-      height: 10em;
-    }
-  }
+
+
+
+

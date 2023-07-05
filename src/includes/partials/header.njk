@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,123 @@
     <meta name="description" content="{{ description }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 </head>
+
 <body>
+    <div class="social-icons">
+        <div class="container-xl">
+            <a href="#" class="d-block" title="Facebook">
+                <svg width="30" height="30" viewBox="0 0 303 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2783_39)">
+                        <ellipse cx="151.5" cy="152" rx="151.5" ry="152" fill="var(--color-light-2)" />
+                        <path
+                            d="M277.5 152C277.5 221.943 221.009 278.5 151.5 278.5C81.9913 278.5 25.5 221.943 25.5 152C25.5 82.0567 81.9913 25.5 151.5 25.5C221.009 25.5 277.5 82.0567 277.5 152Z"
+                            stroke="var(--color-dark-2)" stroke-width="51" />
+                        <path
+                            d="M148 28C85.5901 28 35 78.627 35 141.082C35 197.771 76.7309 244.587 131.107 252.763V171.049H103.15V141.32H131.107V121.542C131.107 88.7931 147.051 74.4203 174.25 74.4203C187.279 74.4203 194.161 75.3815 197.426 75.8225V101.764H178.872C167.323 101.764 163.289 112.721 163.289 125.07V141.32H197.132L192.545 171.049H163.3V253C218.456 245.525 261 198.325 261 141.082C261 78.627 210.41 28 148 28Z"
+                            fill="var(--color-dark-2)" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2783_39">
+                            <rect width="303" height="304" fill="var(--color-light-2)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <a href="#" class="d-block" title="Github">
+                <svg width="30" height="30" viewBox="0 0 304 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="151.5" cy="152" rx="151.5" ry="152" fill="var(--color-dark-2)" />
+                    <path
+                        d="M152 70C106.708 70 70 106.708 70 152C70 197.292 106.708 234 152 234C197.292 234 234 197.292 234 152C234 106.708 197.292 70 152 70ZM152 86.4C188.163 86.4 217.6 115.837 217.6 152C217.6 155.844 217.216 159.623 216.575 163.275C214.557 162.827 211.578 162.282 208.119 162.25C205.556 162.218 202.353 162.634 199.663 163.019C200.591 160.168 201.2 157.029 201.2 153.794C201.2 145.914 197.356 138.579 191.206 132.525C192.904 126.215 194.57 115.388 190.181 111C177.209 111 170.034 120.257 169.681 120.738C165.677 119.777 161.545 119.2 157.125 119.2C151.455 119.2 146.042 120.225 140.981 121.763L142.519 120.481C142.519 120.481 135.312 110.488 122.019 110.488C117.374 115.164 119.488 127.016 121.25 133.038C114.972 139.027 111 146.106 111 153.794C111 156.484 111.641 159.047 112.281 161.481C110.007 161.225 101.807 160.456 98.4438 160.456C95.4648 160.456 90.8523 161.161 87.1688 161.994C86.6563 158.727 86.4 155.395 86.4 152C86.4 115.837 115.837 86.4 152 86.4ZM98.4438 162.506C101.679 162.506 111.513 163.659 112.794 163.788C112.954 164.236 113.114 164.652 113.306 165.069C109.783 164.748 102.96 164.268 98.4438 164.813C95.4328 165.165 91.5891 166.254 88.1938 167.119C87.9375 166.094 87.6172 165.101 87.425 164.044C91.0125 163.275 95.7211 162.506 98.4438 162.506ZM208.119 164.3C211.386 164.332 214.365 164.877 216.319 165.325C216.223 165.87 215.934 166.318 215.806 166.863C213.724 166.382 210.297 165.677 206.325 165.581C204.403 165.549 201.328 165.645 198.638 165.838C198.766 165.581 198.798 165.325 198.894 165.069C201.68 164.684 205.236 164.268 208.119 164.3ZM103.569 166.606C108.181 166.638 112.505 166.959 114.331 167.119C118.623 175.127 127.304 181.052 140.725 183.519C137.426 185.345 134.479 187.907 132.269 190.95C130.347 191.11 128.329 191.206 126.375 191.206C120.673 191.206 117.118 186.113 114.075 181.725C111 177.337 107.22 176.856 105.106 176.6C102.96 176.344 102.223 177.561 103.313 178.394C109.559 183.198 111.801 188.9 114.331 194.025C116.605 198.638 121.378 201.2 126.631 201.2H127.656C127.496 202.097 127.4 202.93 127.4 203.763V212.731C108.47 205.076 94.0555 188.9 88.7063 168.913C92.0695 168.08 95.8492 167.215 98.7 166.863C100.013 166.702 101.679 166.574 103.569 166.606ZM206.325 167.631C210.009 167.727 213.276 168.432 215.294 168.913C210.777 185.889 199.63 200.015 184.8 208.631V203.763C184.8 196.78 179.291 187.811 171.475 183.519C184.448 181.148 192.904 175.479 197.356 167.888C200.463 167.663 204.115 167.567 206.325 167.631ZM156.1 201.2C158.342 201.2 160.2 203.058 160.2 205.3V217.088C157.509 217.44 154.787 217.6 152 217.6V205.3C152 203.058 153.858 201.2 156.1 201.2ZM139.7 209.4C141.942 209.4 143.8 211.258 143.8 213.5V217.088C141.045 216.735 138.259 216.223 135.6 215.55V213.5C135.6 211.258 137.458 209.4 139.7 209.4ZM172.5 209.4C174.486 209.4 176.216 210.841 176.6 212.731C173.941 213.82 171.219 214.813 168.4 215.55V213.5C168.4 211.258 170.258 209.4 172.5 209.4Z"
+                        fill="var(--color-light-2)" />
+                </svg>
+            </a>
+            <a href="#" class="d-block" title="Codepen">
+                <svg width="30" height="30" viewBox="0 0 303 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3076_2)">
+                        <ellipse cx="151.5" cy="152" rx="151.5" ry="152" fill="var(--color-dark-2)" />
+                        <path
+                            d="M151.032 69L69.032 123.133L69 178.867L150.968 233L232.968 178.867L233 123.133L151.032 69ZM151.032 167.4L126.422 151L151.032 134.6L175.642 151L151.032 167.4ZM159.235 120.346V94.0805L210.377 127.841L190.414 141.134L159.235 120.346ZM142.829 120.346L111.618 141.134L91.687 127.841L142.829 94.0805V120.346ZM96.846 151L85.4064 158.623L85.4384 143.409L96.846 151ZM111.618 160.866L142.829 181.654V207.952L91.6549 174.159L111.618 160.866ZM159.235 181.654L190.414 160.866L210.345 174.127L159.203 207.887V181.654H159.235ZM205.218 151L216.594 143.409L216.562 158.559L205.218 151Z"
+                            fill="var(--color-light-2)" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3076_2">
+                            <rect width="303" height="304" fill="var(--color-light-2)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+
+    </div>
     <header class="site-header">
         <div class="container-xl">
-            <div class="row">
-                <div class="col-md-3">
+            <div class="row align-items-center">
+                <div class="col-md-2">
                     <div class="site-logo">
                         <a href="/">
-                            <h5>Logo</h5>
+                            <svg viewBox="0 0 563 271" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2783_2)">
+                                    <rect x="105" width="6" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="174" width="12" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="130" width="6" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="114" width="12" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="146" width="6" height="271" fill="var(--color-dark-1)" />
+                                    <rect width="9" height="271" transform="matrix(-1 0 0 1 199 0)" fill="var(--color-dark-1)" />
+                                    <rect width="7" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="47" width="9" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="10" width="3" height="271" fill="#333333" />
+                                    <rect x="20" width="3" height="271" fill="#333333" />
+                                    <rect x="35" width="8" height="271" fill="var(--color-dark-1)" />
+                                    <rect width="12" height="271" transform="matrix(-1 0 0 1 101 0)" fill="var(--color-dark-1)" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 73 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 142 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 83 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 161 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 231 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 266 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 275 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 316 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 206 0)" fill="#333333" />
+                                    <rect width="3" height="271" transform="matrix(-1 0 0 1 212 0)" fill="#333333" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 66 0)" fill="var(--color-dark-1)" />
+                                    <rect width="9" height="271" transform="matrix(-1 0 0 1 547 0)" fill="var(--color-dark-1)" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 500 0)" fill="var(--color-dark-1)" />
+                                    <rect width="11" height="271" transform="matrix(-1 0 0 1 471 0)" fill="var(--color-dark-1)" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 528 0)" fill="var(--color-dark-1)" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 563 0)" fill="var(--color-dark-1)" />
+                                    <rect x="320" width="9" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="332" width="6" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="363" width="6" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="402" width="12" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="347" width="3" height="271" fill="#333333" />
+                                    <rect x="373" width="3" height="271" fill="#333333" />
+                                    <rect x="383" width="3" height="271" fill="#333333" />
+                                    <rect x="392" width="3" height="271" fill="#333333" />
+                                    <rect x="418" width="3" height="271" fill="#333333" />
+                                    <rect x="446" width="3" height="271" fill="#222222" />
+                                    <rect x="478" width="3" height="271" fill="#222222" />
+                                    <rect x="487" width="3" height="271" fill="#222222" />
+                                    <rect x="513" width="3" height="271" fill="#222222" />
+                                    <rect x="551" width="3" height="271" fill="#222222" />
+                                    <rect x="453" width="3" height="271" fill="#222222" />
+                                    <rect x="216" width="5" height="271" fill="var(--color-dark-1)" />
+                                    <rect x="243" width="6" height="271" fill="var(--color-dark-1)" />
+                                    <rect width="11" height="271" transform="matrix(-1 0 0 1 441 0)" fill="var(--color-dark-1)" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 307 0)" fill="var(--color-dark-1)" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 284 0)" fill="var(--color-dark-1)" />
+                                    <rect width="6" height="271" transform="matrix(-1 0 0 1 294 0)" fill="var(--color-dark-1)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2783_2">
+                                        <rect width="563" height="271" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-9 d-none d-md-block">
+                <div class="col-md-10 d-none d-md-block">
                     <nav class="main-nav">
                         <ul>
                             <li>
@@ -46,6 +152,9 @@
                                     Kontakt
                                 </a>
                             </li>
+                            <li>
+                                <button class="change-theme">Zmień motyw</button>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -53,5 +162,5 @@
         </div>
     </header>
     <div id="swup" class="transition-fade">
-    <div id="progress-bar"></div>
-    <main>
+        <div id="progress-bar"></div>
+        <main>
