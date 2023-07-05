@@ -47,8 +47,9 @@
 .xl {
     font-size: 18vw; 
     line-height: 1.1;
+    letter-spacing: -0.025em;
     color: var(--color-accent-1);
-    font-weight: 700
+    text-shadow: -4px 4px 15px #1113
 }
 h1, .h1 {
     font-size: 9vw; 
@@ -101,7 +102,7 @@ p {
 
 @media(min-width:767px) {
     .xl {
-        font-size: 12vw
+        font-size: 14vw
     }
     h1, .h1 {
         font-size: 5.2vw
@@ -116,10 +117,10 @@ p {
         font-size: 3vw
     }
     h5, .h5 {
-        font-size: 2vw
+        font-size: 1.9vw
     }
     h6, .h6 {
-        font-size: 1.2vw
+        font-size: 1vw
     }
     p {
         font-size: 1.15vw

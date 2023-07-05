@@ -26,6 +26,17 @@ main {
     background-color: rgba(116, 116, 116, 0.4)
 }
 
+.line-left {
+  transform: translateX(-10%);
+  width: 110%;
+  transition-property: width;
+}
+
+.line-right {
+  width: 110%;
+  transition-property: width;
+}
+
 .reveal-wrap {
     visibility: hidden;
     position: relative;

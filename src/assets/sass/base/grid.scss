@@ -1,3 +1,4 @@
+
 .container,
 .container-fluid,
 .container-xl {
@@ -1344,7 +1345,7 @@
   margin-right: auto !important;
 }
 .mb-0 {
-  margin-bottom: 0 !important;
+  margin-bottom: 0 !important; 
 }
 .mb-1 {
   margin-bottom: 0.25rem !important;
@@ -1384,6 +1385,12 @@
 }
 .ms-auto {
   margin-left: auto !important;
+}
+.mb-minus-2 {
+  margin-bottom: -2em;
+}
+.mb-minus-3 {
+  margin-bottom: -2.5em;
 }
 .p-0 {
   padding: 0 !important;

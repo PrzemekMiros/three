@@ -206,11 +206,11 @@ paths.forEach(el => {
 // Footer parallax
 if (window.matchMedia("(min-width: 767px)").matches) {
   gsap.from(".footer-parallax", {
-    y: "-50%",
+    y: "-40%",
     scrollTrigger: {
       trigger: ".site-footer",
       start: "top 90%",
-      end: "bottom 80%",
+      end: "bottom 85%",
       scrub: true
     }
   });

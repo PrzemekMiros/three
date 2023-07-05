@@ -38,7 +38,7 @@
       #7734eb,
       #a834eb
     );
-    filter: blur(400px);
+    filter: blur(100px);
     border-radius: 100%;
     background-size: 1000% 100%;
     animation: gradient 10s infinite ease-out;
@@ -69,15 +69,15 @@
 @media(min-width:767px) {
   .hand-img-wrap {
     top: 50%;
-    right: 32%;
-    width: 21%
+    right: 22%;
+    width: 27%
   }
 .hero-gradient-wrap {
-  right: 30%;
+  right: 28%;
   top: 41%
 }
 .hero-gradient {
-  height: 21em;
+  height: 30em;
   width: 32em
 }
 }

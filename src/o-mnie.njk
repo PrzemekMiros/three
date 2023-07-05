@@ -2,12 +2,17 @@
 layout: "layouts/page.njk"
 title: O mnie
 description: Kilka słów o tym co robię i w czym mogę pomóc
-hero_image: /assets/img/hand.png
+hero_image: /assets/img/hero/hand-thumb.png
 ---
 
 <section class="pt-large pb-xxlarge">
     <div class="container">
-        <div class="row">
+        <div class="row flex-md-row-reverse">
+            <div class="offset-md-2 col-md-6">
+                <div class="reveal-wrap mb-5 mb-md-0">
+                    <img src="/assets/img/about.jpg" alt="" class="reveal-image">
+                </div>
+            </div>
             <div class="col-md-4 d-flex align-items-center">
                 <div>
                     <small class="fade-in">
@@ -30,11 +35,6 @@ hero_image: /assets/img/hand.png
                             </span>
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class="offset-md-2 col-md-6">
-                <div class="reveal-wrap">
-                    <img src="/assets/img/about.jpg" alt="" class="reveal-image">
                 </div>
             </div>
         </div>
