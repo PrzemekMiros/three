@@ -89,11 +89,11 @@ splitTextLines.forEach(element =>{
   gsap.from(mySplitText.lines, {
         autoAlpha: 0,
         opacity: 0,
-        duration: 1.2,
+        duration: 1,
         delay: 0.1,
-        stagger: 0.05,
+        stagger: 0.04,
         yPercent: 105,
-        ease: Power4.easeInOut,
+        ease: Power2.easeIn,
         scrollTrigger: { 
           trigger: element,
           //toggleActions: 'restart pause reverse pause',
@@ -172,6 +172,7 @@ revealContainers.forEach((element) => {
 
   gsap.from(element, 1.5, {
     xPercent: -102,
+    delay: .2,
     ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: element
@@ -179,6 +180,7 @@ revealContainers.forEach((element) => {
   });
   gsap.from(image, 1.5, {
     xPercent: 102,
+    delay: .2,
     scale: 1.3,
     ease: Power3.easeInOut,
     scrollTrigger: {
