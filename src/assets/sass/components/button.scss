@@ -20,7 +20,8 @@
     overflow: hidden;
     pointer-events: all;
     box-shadow: -4px 4px 45px #1113;
-    cursor: pointer
+    cursor: pointer;
+    z-index: 99
   }
   
   .circle-btn .btn-fill {
