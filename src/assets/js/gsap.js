@@ -61,13 +61,13 @@ splitTextLetters.forEach(element =>{
     charsClass: "char"
   });
   gsap.from(mySplitText.chars, {
-       yPercent: 100,
-       autoAlpha: 0,
-       opacity: 0,
-       duration: 1.2,
-       delay: 0.1,
-       ease: Power4.easeInOut,
-       stagger: 0.03,
+       yPercent: 102,
+       duration: 1.5,
+       delay: 0.2,
+       ease: "power4.out",
+       stagger: {
+         amount: 0.25
+       },
        scrollTrigger: { 
          trigger: element,
          //toggleActions: 'restart pause reverse pause',
@@ -89,11 +89,13 @@ splitTextLines.forEach(element =>{
   gsap.from(mySplitText.lines, {
         autoAlpha: 0,
         opacity: 0,
-        duration: 1,
-        delay: 0.1,
-        stagger: 0.04,
-        yPercent: 105,
-        ease: Power2.easeIn,
+        duration: 1.5,
+        delay: 0.2,
+        stagger: {
+          amount: 0.25
+        },
+        yPercent: 102,
+        ease: "power4.out",
         scrollTrigger: { 
           trigger: element,
           //toggleActions: 'restart pause reverse pause',
@@ -108,9 +110,8 @@ fadeIn.forEach(fadeInItem => {
     autoAlpha: 0,
     opacity: 0,
     y: 50,
-    duration: 1.2,
-    delay: 0.1,
-    ease: Power4.easeInOut,
+    duration: 1.5,
+    delay: 0.2,
     scrollTrigger: {
       trigger: fadeInItem,
       start: "top 98%",
@@ -125,9 +126,8 @@ scaleIn.forEach(scaleInItem => {
     autoAlpha: 0,
     opacity: 0,
     scale: 0,
-    duration: 1.2,
-    delay: 0.1,
-    ease: Power4.easeInOut,
+    duration: 1.5,
+    delay: 0.2,
     scrollTrigger: {
       trigger: scaleInItem,
       start: "top 98%",
@@ -140,9 +140,8 @@ const lineX = gsap.utils.toArray('.line-x');
 lineX.forEach(lineXItem => {
 gsap.from(lineXItem, { 
 width: "0",
-duration: 1.2,
-delay: 0.1,
-ease: Power4.easeInOut,
+duration: 1.5,
+delay: 0.2,
 scrollTrigger: {
 trigger: lineXItem,
 start: "top 98%",
@@ -173,7 +172,6 @@ revealContainers.forEach((element) => {
   gsap.from(element, 1.5, {
     xPercent: -102,
     delay: .2,
-    ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: element
     }
@@ -182,7 +180,6 @@ revealContainers.forEach((element) => {
     xPercent: 102,
     delay: .2,
     scale: 1.3,
-    ease: Power3.easeInOut,
     scrollTrigger: {
       trigger: element
     }
@@ -241,15 +238,14 @@ if (window.matchMedia("(min-width: 767px)").matches) {
     });
   };
   
-  window.addEventListener('scroll', function() {
-    // Obliczanie postępu przewijania strony
-    var scrollTop = document.documentElement.scrollTop;
-    var scrollHeight = document.documentElement.scrollHeight;
-    var clientHeight = document.documentElement.clientHeight;
-    var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-    // Ustawianie wysokości paska postępu
-    var progressBar = document.getElementById('progress-bar');
-    progressBar.style.height = progress + '%';
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to('.progress', {
+    height: "100%",
+    ease: 'none',
+    scrollTrigger: { 
+      trigger: "#mySection",
+      scrub: true 
+    }
   });
   
 };

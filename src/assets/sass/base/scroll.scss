@@ -14,14 +14,16 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
    pointer-events: none;
 } 
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 0;
-    transition: 0s;
-    background-color: var(--color-accent-1); 
-    z-index: 9999;
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 0%;
+  border: none;
+  background: var(--color-accent-1);
+  z-index: 999
 }
 }
